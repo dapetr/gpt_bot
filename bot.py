@@ -33,7 +33,7 @@ def start(message):
     logging.debug(f"User {user_id} started the bot")
     user_name = message.from_user.first_name
     bot.send_message(message.chat.id, f"Привет, {user_name}! Я бот озвучки текста с помощью SpeechKit. Отправь мне голосовое сообщение или текст, и я тебе отвечу!",
-                     reply_markup=menu_keyboard(["/tts", "/stt", "/help"]))
+                     reply_markup=menu_keyboard(["/help"]))
 
 
 @bot.message_handler(commands=["help"])
@@ -41,8 +41,7 @@ def help_message(message):
     logging.debug(f"User {message.from_user.id} asked the bot for help")
     bot.send_message(message.chat.id,
                      text=f"/tts - начать генерацию соо в аудио.\n"
-                          f"/stt - начать генерацию аудио в соо.",
-                     reply_markup=menu_keyboard(["/tts", "/stt", "/help"])
+                          f"/stt - начать генерацию аудио в соо."
                      )
 
 
