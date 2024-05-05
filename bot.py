@@ -40,8 +40,7 @@ def start(message):
 def help_message(message):
     logging.debug(f"User {message.from_user.id} asked the bot for help")
     bot.send_message(message.chat.id,
-                     text=f"/tts - начать генерацию соо в аудио.\n"
-                          f"/stt - начать генерацию аудио в соо."
+                     text=f"Отправь мне голосовое сообщение или текст, и я тебе отвечу!"
                      )
 
 
