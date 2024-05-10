@@ -1,6 +1,6 @@
 import telebot
 import logging
-from config import LOGS, COUNT_LAST_MSG
+from config import COUNT_LAST_MSG
 from creds import get_bot_token
 from telebot import types
 from gpt import *
@@ -10,7 +10,7 @@ from stt import *
 from tts import *
 
 
-logging.basicConfig(filename=LOGS, level=logging.ERROR, format="%(asctime)s FILE: %(filename)s IN: %(funcName)s MESSAGE: %(message)s", filemode="w")
+logging.basicConfig(filename="logs.txt", level=logging.ERROR, format="%(asctime)s FILE: %(filename)s IN: %(funcName)s MESSAGE: %(message)s", filemode="w")
 
 
 bot = telebot.TeleBot(get_bot_token())
