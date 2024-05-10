@@ -10,7 +10,7 @@ MAX_USER_STT_BLOCKS = 10
 MAX_USER_TTS_SYMBOLS = 5_000
 MAX_USER_GPT_TOKENS = 2_000
 
-LOGS = 'logs.txt'
+LOGS = f'{HOME_DIR}/logs.txt'
 DB_FILE = f'{HOME_DIR}/database.db'
 
 IAM_TOKEN_PATH = f'{HOME_DIR}/creds/iam_token.txt'
